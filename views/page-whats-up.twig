@@ -1,0 +1,37 @@
+  <div class="container">
+  <div class="row">
+    {% if ispage %}
+    <div class="col-md-8">
+    {% endif %}
+    <h2 class="featurette-heading center-block">{{page.title}}</h2>
+    {% for post in posts %}
+      <div class="featurette">
+        {%if post.thumbnail %}
+        <div class="col-md-7">
+        {% endif %}
+          <h3><span><a href="{{post.permalink}}">{{post.title}}</a></span></h3>
+          <p>{{post.post_excerpt}}</p>
+        {%if post.thumbnail%}  
+        </div>
+        {% endif %}
+        {%if post.thumbnail%}
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive" src="{{post.thumbnail.src}}">          
+        </div>
+        {%endif%}       
+      </div>
+      <div class="clearfix"></div>
+       <hr />
+    {% endfor %}  
+    </div>
+    {% if ispage %}
+    <div class="col-md-4">
+    <h2 class="featurette-heading center-block">Blog</h2>
+      {% for post in tumblr.channel.item %}
+      <h4><a href="{{post.link}}">{{post.title}}</a></h4>
+      <p>{{post.description|excerpt(50)}}</p>
+      {% endfor %}
+    </div>
+    {% endif %}
+    </div>
+  </div>

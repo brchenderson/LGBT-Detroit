@@ -1,0 +1,16 @@
+        <div class="info-page {{ subpage and loop.index != 1 ? 'page-inactive' : 'page-active'}}" id="{{subpage.slug ?: page.slug }}" data-background="{{TimberImage(subpage.get_field('slide_image')).src ?: TimberImage(page.get_field('slide_image')).src}}">
+        <!--data-background="{{function('jetpack_photon_url', TimberImage(subpage.get_field('slide_image')).src ?: TimberImage(page.get_field('slide_image')).src)}}">-->
+        <div class="container">
+          {% if page.slug != 'what-we-do' and page.slug != 'contact-us' and page.slug != 'calendar' %}<div class="col-md-8 main-pages">{% endif %}
+            {% if page.id != home_id %}
+            <h2 class="featurette-heading center-block">{{subpage.title ?: page.title }}</h2>
+            {%endif %}
+              <p class="lead">{{subpage.content ?: page.content }}</p>
+          </div>
+          {% if page.slug != 'what-we-do' and page.slug != 'contact-us' and page.slug != 'calendar' %}
+          <div class="col-md-4 page-sidebar">
+            {{home_sidebar_widgets}}
+          </div>
+          {% endif %}
+        </div>
+      </div>          

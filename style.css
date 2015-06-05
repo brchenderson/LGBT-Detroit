@@ -1,0 +1,507 @@
+    /* Move down content because we have a fixed navbar that is 50px tall */
+    a{
+      color:rgba(150, 105, 84, 1)!important;
+    }
+
+
+body {
+  padding-top: 80px;
+  padding-bottom: 20px;
+  font-family: 'Open Sans', sans-serif!important;
+}
+
+.navbar{
+  background: rgba(25,25,25,0.9)!important;
+}
+
+.subheading{
+  color: white;
+  font-weight: normal;
+  line-height: 1.5em;
+  margin:0;
+  text-align: center;
+  text-transform: uppercase;
+  background: rgba(150, 105, 84, 1);
+}
+
+.subheading a{
+  color: white!important;
+}
+
+
+.headline{
+  font-family: 'Raleway', sans-serif;
+  font-weight: normal;
+  font-size: 1.5em;  
+}
+
+.btn-carousel, .btn-carousel:hover{
+  background-color: rgba(0,0,0,0.35);
+  border: 5px solid white!important;
+  border-color: white!important;
+  border-radius: 0px!important;
+  color: white!important;
+  min-width: 33%;
+  text-transform: uppercase;
+}
+
+.btn-carousel a{
+  color: white!important;
+}
+
+.btn-donate{
+  background-color: rgba(150, 105, 84, 1);
+  border-bottom: 1px solid #999!important;
+  border-left: 1px solid #999!important;
+  border-right: 1px solid #999!important;  
+  color: white!important;
+  float: left;
+  font-family: 'Raleway', sans-serif;
+  margin-top: -15px;
+  text-transform: uppercase;
+  z-index: 99999999;
+  position: relative;
+  left: 80%;
+  top: 10px;
+}
+
+.navbar{
+  height: 80px!important;
+  margin-bottom: 0 !important;
+}
+
+.navbar-brand{
+  border: 0!important;
+  height: 75px!important;
+}
+
+.navbar-toggle{
+  margin-top: 8px!important
+}
+
+.navbar-nav>li{
+border: 0px!important;
+}
+
+
+.searchli:hover{
+  background-color: rgba(0,0,0,0.35)!important;
+}
+
+.navbar-nav>li:hover{
+background: rgba(150, 105, 84, 1)!important
+}
+
+
+
+.navbar-nav>li>a:hover{
+background: white; 
+border-bottom: 5px solid white;
+}
+
+
+.navbar-nav>li>a{
+  color:#fff!important;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  font-weight: medium;
+  border: 0px!important;
+}
+
+.newsfeed img{
+  margin: 5px;
+}
+
+.info-pane>ul{
+  list-style-type: none;
+  padding-left: 0px;  
+}
+
+.info-pane>ul>li{
+  margin-bottom: 5px;
+}
+
+.info-pane>ul>li>i{
+  font-size: 2em;
+}
+
+.event{
+  border-bottom: 1px dotted #999;
+}
+
+.main-content>img {
+  width: 100%;
+
+}
+
+.list-group-item.active{
+  background-color: #FFC125!important;
+  border-color: #efefef!important;
+  color: #121212!important;
+}
+
+@media (min-width: 768px) {
+    .navbar .navbar-nav {
+        display: inline-block;
+        float: none;
+        vertical-align: top;
+    }
+
+}
+
+
+footer{
+  background-color: #eaeaea;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+
+
+
+@media only screen and (max-width : 1200px) {
+
+}
+
+@media only screen and (max-width : 1000px) {
+   .navbar-nav>li>a {
+       font-size: 0.65em!important;
+   }
+   .navbar-form{
+    display: none!important;
+   }
+
+}
+
+@media only screen and (max-width : 767px) {
+
+}
+
+@media only screen and (max-width : 480px) {
+    /*.carousel{
+      display: none;
+    } */
+
+}
+
+@media only screen and (max-width : 320px) {
+
+}
+
+
+/*
+CAROUSEL STYLES
+*/
+
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */
+
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+.navbar-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+}
+
+/* Flip around the padding for proper display in narrow viewports */
+.navbar-wrapper > .container {
+  padding-right: 0;
+  padding-left: 0;
+}
+.navbar-wrapper .navbar {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.navbar-wrapper .navbar .container {
+  width: auto;
+}
+
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  height: 500px;
+  margin-bottom: 0px;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+    z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 500px;
+  background-color: #777;
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-position: center center;
+  background-size: cover;
+}
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100vh;
+  height: 500px;
+}
+
+
+/* STAFF CAROUSEL
+-------------------------------------------------- */
+.staff {
+  height: 500px!important;
+
+}
+
+/* CUSTOM FONTS FOR MAIN CAPTION
+-------------------------------------------------- */
+.carousel-caption h1 a{
+  color: white!important;
+}
+
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 80px 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading, .woocommerce .page-title {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 768px) {
+
+  /* Navbar positioning foo */
+  .navbar-wrapper {
+    margin-top: 20px;
+  }
+  .navbar-wrapper .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .navbar-wrapper .navbar {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  /* The navbar becomes detached from the top, so we round the corners */
+  .navbar-wrapper .navbar {
+    border-radius: 4px;
+  }
+
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: 1.4;
+  }
+
+  .featurette-heading, .woocommerce .page-title {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 992px) {
+  .featurette-heading, .woocommerce .page-title {
+    margin-top: 120px;
+  }
+  .collapse {
+       display: none !important;
+   }
+
+}
+
+@media (max-width: 1024px){
+    /* Carousel base class */
+.carousel {
+  height: 500px;
+  margin-bottom: 0px;
+}
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 500px;
+}
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100vh;
+  height: 500px;
+}
+
+}
+
+
+.arrow-down {
+  width: 0; 
+  height: 0; 
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid rgba(150, 105, 84, 1);
+}
+
+.arrow-right {
+  width: 0; 
+  height: 0; 
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 20px solid rgba(0, 0, 0, 0.75);
+}
+
+ .whats_up_widget-2{
+  background: #ad7721;
+  
+ }
+
+ .whatsup{
+  padding: 5px;
+  color: white;
+ }
+
+ .whatsup:hover{
+  background-color: #5C4033;
+ }
+
+ .whatsup a{
+  color: white!important;  
+ }
+
+ .page-sidebar{
+  margin-top: 120px;
+ }
+
+ .join-mlist{
+  background: rgba(0, 0, 0, 1);
+  color: white;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+ }
+
+ .submit{
+  background: transparent;
+  border: 0;
+  color: white;
+  font-size: 1.4em;
+ }
+
+.navbar-brand img{
+    height:75px;
+    width:154px;
+   }
+
+@media only screen and (max-width : 992px) {
+  .footer-widgets{
+    display: none;
+  }
+
+  .social-icons{
+    display: block!important;
+  }
+}
+.social-icons{
+  font-size: 2.5em;
+  display: none;
+}
+
+.featurette{
+  margin-bottom: 15px;
+}
+
+@media only screen and (max-width : 1200px) {
+.nav>li>a{
+  padding:30px 8px!important;
+}
+.navbar-nav>li>a{
+  font-size: 0.65em!important;
+}
+
+.form-control{
+  width:150px!important;
+}
+
+}
+
+@media only screen and (max-width : 480px) {
+    body{
+      padding-top: 32px;
+    }
+   .navbar-fixed-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse {
+      max-height: 10000px!important;
+      background: rgba(25,25,25,0.9)!important;
+    }
+    .navbar-nav>li>a{
+      font-size: 1em!important;
+      padding: 10px 8px!important;
+    }
+    .navbar-form{
+      display: block!important;
+      border: 0!important;
+    }
+    .form-control{
+      width: 80%!important;
+      margin-left: 5px;
+    }
+    .submit{
+      display: none!important;
+    }
+    .btn-donate{
+      display: none!important;
+    }
+
+}
+.fb_iframe_widget{
+  top: -4px;
+}
+
+.fb-like-box{
+  width: 100%;
+}
+
+
+.view-container-border, .ui-rtsr-selected, .ui-rtsr-unselected, .mv-dayname{
+  background-color: rgba(150, 105, 84, 1)!important;
+  color: white;
+
+}
+
+.calendar{
+  padding: 20px;
+  margin-bottom: 25px;
+}
+
+.wc-header{
+  margin-top: 20px;
+
+}
+.wc-cart{
+  font-size: 1.2em;
+}
+
+.woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt, .woocommerce a.button.alt:hover{
+  background-color: rgba(150, 105, 84, 1);
+  color: white!important;
+}
+
+
+
+.legal-footer{
+  float: left;
+  font-size: 0.8em;
+  margin-top: 10px;
+  text-align: center;
+  width: 100%;
+}
+

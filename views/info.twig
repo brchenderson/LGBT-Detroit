@@ -1,0 +1,15 @@
+<div class="container-fluid wow fadeIn" id ="{{page.slug}}">
+  {% set pagelayout = page.get_field('layout') ~ '.twig' %}
+  {% if page.get_field('layout') == 'page-default' %}        
+    {% if page.children %}
+      {% for subpage in page.children %}
+        {% set subpagelayout = subpage.get_field('layout') ~ '.twig' %}
+        {% include subpagelayout with {'subpage' : subpage} %}      
+      {% endfor %}
+    {% else %}      
+      {% include pagelayout %}
+    {% endif %}
+  {% else %}  
+    {% include pagelayout %}  
+  {% endif %}
+</div>

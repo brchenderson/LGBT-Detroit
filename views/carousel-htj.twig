@@ -1,0 +1,71 @@
+<div id="htjCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+    <!-- Indicators -->
+    {% if slides|length > 1 and page.get_field('layout') != 'staff' %}
+      <ol class="carousel-indicators">
+      {% for slide in slides %}
+		    {%if loop.index == 1 %}
+          <li data-target="#htjCarousel" data-slide-to="{{loop.index}}" class="active"></li>
+        {% else %}
+          <li data-target="#htjCarousel" data-slide-to="{{loop.index}}"></li>
+        {% endif %}
+      {% endfor %}
+      </ol>
+    {% endif %}
+    <!-- Indicators -->
+
+  <div class="carousel-inner" role="listbox">
+    {% for slide in slides %}            
+        <div class="item {{loop.index == 1 ? 'active' : ''}} {{ page.get_field('layout')}}" style="background-image:url('{{TimberImage(slide.get_field('slide_image')).src}}'); {{page.get_field('layout') == 'staff' ? 'background-attachment:scroll' : ''}}" data-interval = "{{page.get_field('layout') == 'staff' ? 'false' : '5000'}}">
+        {% if slide.slide_video %}      
+          <div id="slide_video{{loop.index}}"></div>            
+        {% endif %}
+          <div class="container">            
+            <div class="carousel-caption {{ page.get_field('layout')}}">
+              <h1><a class="carousel-link" href="{{slide.get_field('slide_link')}}">{{slide.title}}</a></h1>
+              {% if slide.slide_link and slide.slide_link_text %}
+                <p><a class="btn btn-lg btn-primary" href="{{slide.slide_link}}" role="button" target="_blank">{{slide.slide_link_text}}</a></p>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+    {% endfor %}
+  </div>
+
+{% if slides|length > 1 and page.get_field('layout') != 'staff' %}
+      <a class="left carousel-control" href="#htjCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#htjCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+      </a>
+
+{% elseif slides|length > 1 and page.get_field('layout') == 'staff' %}
+  <div class="row">
+ {% for slide in slides %} 
+    <p class="pull-left" style="width:25%; margin-left: 4%; margin-right:4%;"><img src="{{TimberImage(slide.get_field('slide_image')).src|resize(150)}}" data-slide-to="{{loop.index0}}" data-target="#htjCarousel" class="img-thumbnail {{loop.index == 1 ? 'active' : ''}} " /></p>
+    {% if loop.index % 3 == 0 %}
+    </div>
+    <div class="row">
+    {% endif %}
+  {% endfor %}
+  </div>
+{% endif %}
+
+
+<!--<div class="scroll-down center-block">
+  <i class="fa fa-arrow-circle-down"></i><br />
+  <h3>Scroll down to continue</h3>
+</div>-->
+
+
+</div><!-- /.carousel -->
+
+
+
+<script>
+$('.carousel').carousel({
+  interval: 2000
+})
+</script>

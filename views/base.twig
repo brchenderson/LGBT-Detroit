@@ -1,0 +1,21 @@
+  {% include 'header.twig' %}
+  {{nav}}  
+  {% set homelayout = home.0.get_field('layout') ~ '.twig' %} 
+  {%if slideshow %}
+  {{slideshow}} 
+  {% endif %}
+  {% if ishome and homelayout != ".twig" %}
+  {% include homelayout with {'page': home.0} %}
+  {% elseif ispage %}
+  {% include pagetemplate with {'page': page, 'posts': posts} %}
+  {% elseif issearch %} 
+  {% include 'page-whats-up.twig' with {'page': page, 'posts': posts} %}
+  {% elseif iswoocommerce %} 
+  
+  <div class="container wc-header"><span class="pull-right wc-cart"><a href="{{site.url}}/cart"><i class="fa fa-shopping-cart"></i> View Cart</a></span></div>
+  <div class="container woocommerce">{{function('woocommerce_content')}}</div>
+  {% endif %}
+  {% include 'social-footer.twig' with {'footer_widgets': footer_widgets} %}  
+  {% include 'donate.twig' with {'donate': donate} %} 
+  {% include 'jsfooter.twig' %}
+ 

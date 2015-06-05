@@ -1,0 +1,150 @@
+/*
+Theme Name: LGBT Detroit
+Theme URI: 
+Version: 0.1
+Description: Hotter Than July Styles
+Author: Brian Henderson
+Author URI: http://www.brianhenderson.org
+
+/*------------------------------------------------*/
+/*-----------------[BASIC STYLES]-----------------*/
+/*------------------------------------------------*/
+
+body {
+  font-family: 'Open Sans', sans-serif!important;
+}
+
+a{
+	color:#cf0f0f;
+}
+
+@media (min-width: 768px) {
+    .navbar .navbar-nav {
+        display: inline-block;
+        float: none;
+        vertical-align: top;
+    }
+
+    .navbar .navbar-collapse {
+        text-align: center;
+    }
+}
+
+
+.navbar-collapse {
+	background-color: #cf0f0f;
+}
+
+.navbar-default .navbar-nav>li>a,.navbar-collapse a{
+	color: white;
+}
+
+.navbar-nav>li:hover{
+	background-color: #ffffff;
+}
+
+a:hover, .navbar-default .navbar-nav>li>a:hover{
+	color:#8B2323;
+}
+#searchform{
+	margin-top: 8px;
+}
+nav, .navbar-default{
+	background: transparent!important;
+	border:0!important;
+}
+
+
+#s{ text-align:center; padding:2px 2px 2px 2px;}
+#searchsubmit{color:white;border:none;}
+/*.submit{background: url("images/submit.png");  background-repeat:no-repeat; background-position:bottom center; width:101px; height:22px; border:none; margin-top:8px;}*/
+.submit{color:#cf0f0f;}
+
+.fb_iframe_widget{
+	top: -4px;
+}
+
+.social-footer{
+	font-size: 3em;
+	margin: 5px;
+}
+
+
+.home-logo-link{
+  color: white;
+}
+
+.htj-logo{
+	position: absolute;
+	right: 10%;
+	top: 20px;
+	z-index: 99999999999999;
+}
+
+.htj-logo img{
+	height: 20vh;
+}
+
+.lgbt-htj-home{
+  position: absolute;
+  left: 10%;
+  top: 50px;
+  z-index: 99999999999999;
+}
+
+
+.lgbt-htj{
+  margin-top: 180px;
+}
+
+.btn-donate{
+  background-color: rgba(207, 15, 15, .8);
+  border-bottom: 1px solid #999!important;
+  border-left: 1px solid #999!important;
+  border-right: 1px solid #999!important;  
+  color: white!important;
+  float: left;
+  font-family: 'Raleway', sans-serif;
+  margin-top: -15px;
+  text-transform: uppercase;
+  z-index: 99999999;
+  position: absolute;
+  left: 80%;
+  top: -20px;
+}
+
+.submit{
+	background: transparent;
+}
+
+.scroll-down, .scroll-down a{
+  color: white;
+  text-align: center;
+}
+
+
+
+@media only screen and (max-width : 992px) {
+  .footer-widgets{
+    display: none;
+  }
+
+  .social-icons{
+    display: block!important;
+  }
+
+  .sidebar-module{
+  	display: none;
+  }
+
+}
+.social-icons{
+  font-size: 2.5em;
+  display: none;
+}
+
+footer{
+  background-color: #eaeaea;
+  width: 100%;
+  margin-bottom: 0;
+}

@@ -1,0 +1,19 @@
+{% include 'header-hotter-than-july.twig'  with {'slides': slides} %}
+{% include 'nav-hotter-than-july.twig' %}
+<div class="container">
+	<div class="row">
+{% if ispage %}
+	{% include 'page-hotter-than-july.twig' with {'page': page, 'posts': posts} %}
+{% endif %}
+
+<div class="col-md-4">
+{{htj_sidebar_widgets}}
+</div>
+</div></div>
+
+<div class="container-fluid">
+<footer>
+{% include 'social-footer-hotter-than-july.twig'  with {'footer_widgets': footer_widgets} %}
+</footer>
+{% include 'donate.twig' with {'donate': donate} %} 
+</div>

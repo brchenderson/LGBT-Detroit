@@ -1,0 +1,24 @@
+<div class="info-page {{ subpage and loop.index != 1 ? 'page-inactive' : 'page-active'}}" id="{{subpage.slug ?: page.slug }}" data-background="{{function('jetpack_photon_url', TimberImage(subpage.get_field('slide_image')).src ?: TimberImage(page.get_field('slide_image')).src)}}">
+<div class="container">
+	<h2 class="featurette-heading center-block" style="font-family:font-family:'Open Sans', sans-serif; font-weight:bold;">{{subpage.title ?: page.title }}</h2>	
+    <div class="col-md-7">              
+      <p class="lead"></p>
+      {% set pagecontext = subpage ?: page %}
+      {% include 'carousel.twig' with { 'slides': staff, 'page': pagecontext } %}
+      <!--<p class="lead">{{subpage.content ?: page.content }}</p>-->
+  	</div>        
+    <div class="col-md-5">
+      <p class="lead"></p>
+        <div class="panel panel-default">
+        <!-- Default panel contents -->
+          <div class="panel-heading">{{page.title}}</div>
+          <!-- List group -->
+          <ul class="list-group page-nav">
+            {% for subpage in page.children %}
+              <li class="list-group-item"><a href="#{{subpage.slug}}">{{subpage.title}}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+  	</div>
+  </div>   
+</div>
